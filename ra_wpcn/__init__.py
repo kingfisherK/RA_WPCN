@@ -1,0 +1,97 @@
+"""RA-WPCN analytical and numerical algorithms for Sections II--IV."""
+
+from ra_wpcn.solvers.angle_optimization import (
+    BoresightChannelState,
+    BoxFrankWolfeResult,
+    PostureChannelState,
+    SphericalCapProjectedGradientResult,
+    assert_angle_fw_result,
+    assert_spherical_cap_pga_result,
+    boresight_channel_state,
+    boresight_and_derivatives,
+    directional_gain_and_derivatives,
+    fw_angle_block,
+    fw_lmo_box,
+    pga_spherical_cap_block,
+    mrc_boresight_gains_and_gradients,
+    normalized_spherical_cap_step,
+    mrc_gains_and_gradients,
+    posture_channel_state,
+    quadratic_values_and_gradients,
+    quadratic_boresight_values_and_gradients,
+    project_boresight_gradients,
+    project_spherical_cap,
+    validate_spherical_cap,
+)
+from ra_wpcn.solvers.ao import (
+    FairAOSolution,
+    build_free_space_problem,
+    default_boresights,
+    default_posture,
+    free_space_propagation,
+    random_boresight_starts,
+    random_posture_starts,
+    solve_fair_rate_ao,
+)
+from ra_wpcn.solvers.ao import AOConfig
+from ra_wpcn.solvers.angle_optimization import FrankWolfeConfig
+from ra_wpcn.models.system_model import db_to_linear, dbm_to_watt
+from ra_wpcn.solvers.multiple_device import (
+    CommonResourceAllocation,
+    FairBoresightUpdate,
+    MultiDeviceProblem,
+    angle_box,
+    evaluate_boresight_composite_gains,
+    evaluate_composite_gains,
+    mrc_receive_beamformers,
+    optimal_uplink_boresights,
+    recover_energy_beams,
+    smooth_min,
+    softmin_weights,
+    solve_common_resource,
+    stable_logsumexp,
+    update_fair_boresights,
+    weighted_covariance_rates,
+    weighted_covariance_rates_angles,
+)
+from ra_wpcn.solvers.ao import WPCNOptimizers
+from ra_wpcn.models.single_device import (
+    SingleDeviceSolution,
+    UPAGainBounds,
+    high_power_asymptotics,
+    optimal_pointing_vectors,
+    optimal_single_device_time,
+    optimal_throughput_phi,
+    ra_fa_throughput_comparison,
+    solve_single_device_closed_form,
+    symmetric_ula_ra_fa_factor,
+    ula_infinite_single_link_gain,
+    ula_single_link_gain,
+    upa_gain_bounds,
+    upa_inner_region_gain,
+)
+from ra_wpcn.models.system_model import (
+    REFERENCE_BORESIGHT,
+    PhysicalPosture,
+    SectionIIEvaluation,
+    achievable_rates,
+    composite_gains,
+    closed_form_uplink_boresights,
+    directional_power_gains,
+    effective_channels,
+    element_to_device_geometry,
+    energy_covariance_from_beams,
+    evaluate_section_ii_model,
+    harvested_energies,
+    mrc_combiners,
+    mrc_gains,
+    per_slot_directional_power_gains,
+    per_slot_effective_channels,
+    posture_from_angles,
+    received_rf_powers,
+    validate_zenith_cap,
+    validate_energy_covariance,
+    validate_spherical_cap_boresights,
+)
+
+__all__ = [name for name in globals() if not name.startswith("_")]

@@ -1,0 +1,5 @@
+numpy>=2.0
+scipy>=1.13
+cvxpy>=1.5,<2
+matplotlib>=3.8
+SciencePlots>=2.1
