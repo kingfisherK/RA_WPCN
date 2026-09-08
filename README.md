@@ -7,7 +7,7 @@ This repository provides the simulation implementation and a fixed user-topology
 dataset for the paper:
 
 > **ROTATABLE ANTENNAS ENABLED WIRELESS POWERED COMMUNICATION NETWORKS: JOINT OPTIMIZATION OF ANTENNA ORIENTATION AND RESOURCE ALLOCATION**  
-> Yiqing Li, Xingshuo Mao and Miao Jiang
+> Yiqing Li, Xingshuo Mao, Miao Jiang and Guangchi Zhang
 
 ## Overview
 
@@ -113,17 +113,6 @@ tables to `IEEE_Figures` by default, with both paths resolved from the repositor
 location. The bundled convergence files predate the current AO-history recorder;
 rerun `convergence` to update them.
 
-
-
-## MATLAB figures for ICASSP_ver12
-
-The four selected manuscript figures can be redrawn from the released CSV files
-using [`matlab/run_all_figures.m`](matlab/run_all_figures.m). The MATLAB entry point
-exports editable `.fig` files and vector `.eps`/`.pdf` files, then reopens each FIG
-to compare its curve data with the CSV. It does not rerun the simulations.
-See [`matlab/README.md`](matlab/README.md) for individual plot entry points,
-output locations, and the current execution status (MATLAB is not installed on
-the preparation machine).
 
 ## License
 
