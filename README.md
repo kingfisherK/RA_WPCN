@@ -7,7 +7,7 @@ This repository provides the simulation implementation and a fixed user-topology
 dataset for the paper:
 
 > **ROTATABLE ANTENNAS ENABLED WIRELESS POWERED COMMUNICATION NETWORKS: JOINT OPTIMIZATION OF ANTENNA ORIENTATION AND RESOURCE ALLOCATION**  
-> Yiqing Li, Xingshuo Mao, Miao Jiang and Guangchi Zhang
+> Yiqing Li, Xingshuo Mao, Miao Jiang, and Guangchi Zhang
 
 ## Overview
 
